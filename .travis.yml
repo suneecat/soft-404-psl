@@ -5,16 +5,12 @@ branches:
   - "/^\\d\\.\\d+$/"
 matrix:
   include:
-  - python: 3.5
-    env: TOXENV=py35
   - python: 3.6
     env: TOXENV=py36
   - python: 3.7
     env: TOXENV=py37
   - python: 3.8
     env: TOXENV=py38
-  - python: 3.5
-    env: TOXENV=train
   - python: 3.6
     env: TOXENV=train
   - python: 3.7
@@ -29,12 +25,11 @@ after_success:
 cache:
   directories:
   - "$HOME/.cache/pip"
-
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
   user: __token__
   password:
-    secure: p1Yll5ymYvgBZsKAhzphiQGxXO3bne/KsMvfsG+mcMi7+5M81As8bYTQMl3zHwmBsicyO1FT+pskpGkPZHqvkzp+z35b+dy8jAht+a5zQQ6K1Mbv7gWlBxWrkNEXH4SItFUAM0qxdIpPdiJfOWzpYFZIxknZDVXdj3iZe3PByXgzSZkJW5TrJRJplrI14puuU3gSuOO2JqF3bHYGM7fJgXNDA8/FeIIX5gHdQfTr9QbHPF39B165lhMD7wX/5Rh979xgyKZLoiyEnyLMg/ybUJ2afrP4hznR+wiRU5Lnky853xudm0PFZeo1q7GorZ4h8v46mVoQ6jE3imsm7JQOEZqCnr6WJQ1WzLEANFwHWfVS8PvIbk13IHlBrMilkKbxE3SdIQ/BTKxkJIDFWwEGmv50dfmiAAbQSeztU4PMuBfVJ2fKjWKGVdE9HzB3vlC7BoE8b9UaSBowJH5vNgq9oD+z0fKmMjLl+xafAOBBHarZBCHmKPzwuIkcl4ZURzkW4qfXdHQnXuhPuAoAiKjK48MHiFVDlXmxNPXj5hXWsHjOgKiHNDbrQOGha4VRYkqyVvZkir4bQT1P2kIus9mOtXWySOTdnaYYW5hvQHoH7V3s5R2AHnQBmbw8zOoOUs1RZQu4BOgmIDWnGVqcuT9wA9/iPT30xay6YQYU4ihsT1c=
+    secure: rEQqKnvBLFlz0WObCDk7eJtEOT6h9IyVNpahVWeF12elj7FR2FAvq+2z6MOPKo2NPeB+R2BNWvSlNQVUiespqWgYnPwpbj5gpHHCS0pqMtRrzqLLgwc752BwpVDgisJnQuJKzoeOUdn4dLaJ8oW5PHE7M8/cnOBWIDbRKH7i387W28GdfSBS+u5TkidYu4tCghfP3DLgaGRdZJ7NEHuL1G7j7Y6K9sU5svN/ebEv0QGGGahAN6QxJ1wnFEvVgEZ6hVqrMp7NYOVw6aWzOZjRIGTMpjtnw6Ebe5zDUfZ2H2QE00Uj4LU+K4kw/TyNRgf201gtLiaEObdNMYVaGQBgw8aWpVwn7zwYtBEjC3bcS8nDTtoPFOqzblj2IrlcoeFPycZ9M9zC3Ycb5Rp9IuAu9PlzRkOvVPUFxXaZYsDPKJ/qgJtTZ+p+7kyLquuhpriU85dCCXscRI+Tf4XPFgL9LK6CaEJccLpXjsiUwIYKBtUZAweheuUcLzUqGIltdLmeGtNuZgZJIrdyJ0Uj2k5rs3imyTLU2pOuVtQkPIqfuJdngBNux/yMqs6M5ltUJsQEkcKFyHnmjQXZtv/Fd2GHgcdaHlRzNcbGrHCdVs2JN6uGzK94SuxLiCnYNfuHsjojq6cm7f+Ea2Rdvrfw/3131XT8vABONf6ikjXeoWrPmQ4=
   on:
     branch: master
