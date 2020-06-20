@@ -5,7 +5,7 @@ soft-404: a classifier for detecting soft 404 pages
    :target: https://pypi.python.org/pypi/soft-404
    :alt: PyPI Version
 
-.. image:: https://img.shields.io/travis/dogancanbakir/soft-404/master.svg
+.. image:: https://api.travis-ci.com/dogancanbakir/soft-404.svg?branch=master
    :target: https://travis-ci.com/github/dogancanbakir/soft-404
    :alt: Build Status
 
