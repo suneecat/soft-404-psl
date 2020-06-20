@@ -1,5 +1,5 @@
 soft-404: a classifier for detecting soft 404 pages
-==================================================
+===================================================
 
 .. image:: https://img.shields.io/pypi/v/soft-404.svg
    :target: https://pypi.python.org/pypi/soft-404
