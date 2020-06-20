@@ -1,16 +1,16 @@
-soft404: a classifier for detecting soft 404 pages
+soft-404: a classifier for detecting soft 404 pages
 ==================================================
 
-.. image:: https://img.shields.io/pypi/v/soft404.svg
-   :target: https://pypi.python.org/pypi/soft404
+.. image:: https://img.shields.io/pypi/v/soft-404.svg
+   :target: https://pypi.python.org/pypi/soft-404
    :alt: PyPI Version
 
-.. image:: https://img.shields.io/travis/TeamHG-Memex/soft404/master.svg
-   :target: http://travis-ci.org/TeamHG-Memex/soft404
+.. image:: https://img.shields.io/travis/dogancanbakir/soft-404/master.svg
+   :target: https://travis-ci.com/github/dogancanbakir/soft-404
    :alt: Build Status
 
-.. image:: http://codecov.io/github/TeamHG-Memex/soft404/coverage.svg?branch=master
-   :target: http://codecov.io/github/TeamHG-Memex/soft404?branch=master
+.. image:: https://codecov.io/gh/dogancanbakir/soft-404/coverage.svg?branch=master
+   :target: https://codecov.io/gh/dogancanbakir/soft-404?branch=master
    :alt: Code Coverage
 
 A "soft" 404 page is a page that is served with 200 status,
@@ -24,7 +24,7 @@ Installation
 
 ::
 
-    pip install soft404
+    pip install soft-404
 
 
 Usage

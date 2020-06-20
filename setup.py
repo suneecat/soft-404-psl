@@ -4,8 +4,8 @@ with open('README.rst') as readme_file:
     readme = readme_file.read()
 
 setup(
-    name='soft404',
-    version='0.2.2',
+    name='soft-404',
+    version='0.3.0',
     author='Konstantin Lopuhin',
     author_email='kostia.lopuhin@gmail.com',
     description='A classifier for detecting soft 404 pages',
