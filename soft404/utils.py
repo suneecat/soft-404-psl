@@ -23,7 +23,7 @@ def get_text_blocks(tree):
     current = []
     for token in tokens:
         parent = token.parent
-        while parent.tag not in BLOCK_TAGS:
+        while parent is not None and parent.tag not in BLOCK_TAGS:
             parent = parent.getparent()
         if prev_parent is not None and prev_parent != parent:
             text_blocks.append((prev_parent.tag, ' '.join(current)))

@@ -3,6 +3,11 @@ Changes
 
 .. contents::
 
+0.3.1 (2020-07-02)
+------------------
+
+- fixed "AttributeError: 'NoneType' object has no attribute 'tag'" issue
+
 0.3.0 (2020-05-13)
 ------------------
 
