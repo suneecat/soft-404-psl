@@ -4,6 +4,9 @@ from string import ascii_lowercase
 
 import scrapy
 from scrapy.linkextractors import LinkExtractor
+from scrapy.spidermiddlewares.httperror import HttpError
+from twisted.internet.error import DNSLookupError
+from twisted.internet.error import TimeoutError, TCPTimedOutError
 
 
 class Spider(scrapy.Spider):
@@ -12,7 +15,7 @@ class Spider(scrapy.Spider):
 
     def __init__(self):
         self.le = LinkExtractor()
-        with open('top-1k.txt') as f:
+        with open('sites.txt') as f:
             self.start_urls = ['http://{}'.format(line.strip()) for line in f]
 
     def parse(self, response):
@@ -26,14 +29,31 @@ class Spider(scrapy.Spider):
             }
             prob_404 = self.settings.getfloat('PROB_404')
             for link in self.le.extract_links(response):
-                yield scrapy.Request(link.url)
+                yield scrapy.Request(link.url, errback=self.errback_http)
                 if random.random() < prob_404:  # get some 404-s
                     p = urlsplit(link.url)
                     if len(p.path.strip('/')) > 1:
                         new_path = mangle_path(p.path)
                         url = urlunsplit(
                             (p.scheme, p.netloc, new_path, p.query, p.fragment))
-                        yield scrapy.Request(url, meta={'mangled_url': True})
+                        yield scrapy.Request(url, meta={'mangled_url': True},
+                                             errback=self.errback_http)
+
+
+    def errback_http(self, failure):
+        self.logger.error(repr(failure))
+
+        if failure.check(HttpError):
+            response = failure.value.response
+            self.logger.error('HttpError on %s', response.url)
+
+        elif failure.check(DNSLookupError):
+            request = failure.request
+            self.logger.error('DNSLookupError on %s', request.url)
+
+        elif failure.check(TimeoutError, TCPTimedOutError):
+            request = failure.request
+            self.logger.error('TimeoutError on %s', request.url)
 
 
 def mangle_path(path):
