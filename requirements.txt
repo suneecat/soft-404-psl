@@ -1,9 +1,9 @@
 langdetect==1.0.8
-lxml==4.5.0
-numpy==1.18.4
+lxml==4.5.2
+numpy==1.19.1
 parsel==1.6.0
-scikit-learn==0.23.0
-joblib==0.14.1
-scipy==1.4.1
+scikit-learn==0.23.2
+joblib==0.16.0
+scipy==1.5.2
 webstruct==0.6
-html-text=0.5.1
+html-text==0.5.2
