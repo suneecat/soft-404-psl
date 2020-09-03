@@ -3,6 +3,13 @@ Changes
 
 .. contents::
 
+0.4.0 (2020-09-02)
+------------------
+
+- pretty print spider errors
+- extend site list
+- re-crawled and re-trained
+
 0.3.1 (2020-07-02)
 ------------------
 

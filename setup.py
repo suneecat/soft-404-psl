@@ -5,7 +5,7 @@ with open('README.rst') as readme_file:
 
 setup(
     name='soft-404',
-    version='0.3.1',
+    version='0.4.0',
     author='Konstantin Lopuhin',
     author_email='kostia.lopuhin@gmail.com',
     description='A classifier for detecting soft 404 pages',

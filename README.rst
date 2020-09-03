@@ -47,9 +47,9 @@ You can also create a classifier explicitly::
 Development
 -----------
 
-Classifier is trained on 37486 pages from 6660 domains, with 404 page ratio of about 1/3.
-With 10-fold cross-validation, PR AUC (average precision) is 0.990 ± 0.006,
-and ROC AUC is 0.994 ± 0.004.
+Classifier is trained on 198801 pages from 35995 domains, with 404 page ratio of about 1/3.
+With 10-fold cross-validation, PR AUC (average precision) is 0.991 ± 0.002,
+and ROC AUC is 0.995 ± 0.002.
 
 
 Getting data for training
