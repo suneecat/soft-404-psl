@@ -4,7 +4,7 @@ with open('README.rst') as readme_file:
     readme = readme_file.read()
 
 setup(
-    name='soft-404',
+    name='soft-404-psl',
     version='0.4.0',
     author='Konstantin Lopuhin',
     author_email='kostia.lopuhin@gmail.com',
